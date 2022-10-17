@@ -1,11 +1,16 @@
 
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import ProductProvider from "./context/ProductProvider";
+import PageContainer from "./components/PageContainer";
+import {ShoppingCartContext} from "./context/ShoppingCartProvider";
 
 function App() {
   return (
-    <div className="App">
+    <ProductProvider>
 
-    </div>
+        <PageContainer/>
+
+    </ProductProvider>
   );
 }
 
