@@ -6,19 +6,22 @@ import PizzaDetail from "../views/PizzaDetail";
 import Cart from "../views/Cart";
 
 
+
 const PageContainer = () => {
 
 
   return (
 
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/pizza/:id" element={<PizzaDetail/>}/>
-        <Route path="/carrito" element={<Cart/>}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/pizza/:id" element={<PizzaDetail/>}/>
+          <Route path="/carrito" element={<Cart/>}/>
+        </Routes>
+      </BrowserRouter>
+
+
 
   )
 };
