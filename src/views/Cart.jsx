@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from "react-bootstrap/ListGroup";
 import {ShoppingCartContext} from "../context/ShoppingCartProvider";
-import {ProductContext} from "../context/ProductProvider";
-
 
 const Cart = () => {
 
@@ -36,7 +34,6 @@ const upperCase = (item) => {
         <Button variant="primary">Ir a Pagar</Button>
       </Card.Body>
     </Card>
-
 
   )
 };

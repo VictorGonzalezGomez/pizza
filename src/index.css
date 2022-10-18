@@ -1,22 +1,52 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .flexContainer {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .imageCart {
-  width: 8rem;
+    width: 8rem;
+}
+
+.active {
+    text-decoration: none;
+    pointer-events: none;
+    color: white;
+}
+
+.disable {
+    text-decoration: none;
+    color: white;
+
+}
+
+.bannerImage {
+    width: 100%;
+
+}
+
+.productContainer {
+    width: 70rem;
+    display: flex;
+
+}
+.logo {
+  width: 2rem;
+}
+
+.ingredientsLogo {
+    width: 2rem;
 }
