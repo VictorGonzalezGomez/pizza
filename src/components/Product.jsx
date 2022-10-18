@@ -5,11 +5,13 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import {Button, ButtonGroup, ButtonToolbar, Col, Row} from "react-bootstrap";
 
 import {useNavigate} from "react-router-dom";
+import {ShoppingCartContext} from "../context/ShoppingCartProvider";
 
 const Product = () => {
 
   const navigate = useNavigate()
   const pizzas = useContext(ProductContext);
+  const { increaseItemAmount } = useContext(ShoppingCartContext);
 
   return (
 
@@ -38,11 +40,10 @@ const Product = () => {
                   <Button onClick={() => navigate(`/pizza/${pizza.id}`)}>Ver mas</Button>
                 </ButtonGroup>
                 <ButtonGroup className="me-2" aria-label="Second group">
-                  <Button>Añadir al carrito</Button>
+                  <Button onClick={()=> increaseItemAmount(pizza)} >Añadir al carrito</Button>
                 </ButtonGroup>
               </ButtonToolbar>
             </Card>
-
           </Col>
         ))}
       </Row>
