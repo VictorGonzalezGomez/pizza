@@ -3,12 +3,13 @@ import {Button, Card} from "react-bootstrap";
 import {ProductContext} from "../context/ProductProvider";
 import {useParams} from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
+import {ShoppingCartContext} from "../context/ShoppingCartProvider";
 
 const PizzaDetail = () => {
   const {id} = useParams();
   const pizzas = useContext(ProductContext);
   const filteredPizza = pizzas.filter((pizzas) => pizzas.id === `${id}`);
-  console.log(filteredPizza)
+  const { increaseItemAmount } = useContext(ShoppingCartContext);
   return (
 
     <div className="flexContainer">
@@ -31,9 +32,8 @@ const PizzaDetail = () => {
             <Card.Text>
               <strong>$ {filteredPizza[0].price.toLocaleString("es-CL")}</strong>
             </Card.Text>
-            <Button variant="primary">añadir al carrito</Button>
+            <Button variant="primary" onClick={()=> increaseItemAmount(filteredPizza[0])} >Añadir al carrito</Button>
           </div>
-
         </Card.Body>
       </Card>
     </div>

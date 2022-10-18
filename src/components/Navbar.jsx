@@ -1,14 +1,14 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import {NavLink} from "react-router-dom";
 function  PizzaNavbar() {
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand href="/">Pizzeria mamma mia!! </Navbar.Brand>
+        <NavLink to="/">Pizzeria mamma mia!! </NavLink>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Nav.Link href="/carrito">carrito</Nav.Link>
+          <NavLink to="/carrito">carrito</NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>

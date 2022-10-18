@@ -21,6 +21,7 @@ export function ShoppingCartProvider(props) {
       }
     })
   }
+
   const decreaseItemAmount = (newItem) => {
     setShoppingCartItem(shoppingCartItem => {
       if (shoppingCartItem.find(item => item.id === newItem.id)?.quantity === 1) {
@@ -36,9 +37,20 @@ export function ShoppingCartProvider(props) {
       }
     })
   }
-
+  const totalPriceCart = () => {
+    const totalPrice = shoppingCartItem.reduce((total, cartItem) => {
+      const item = shoppingCartItem.find(i => i.id === cartItem.id)
+      return total + (item?.price || 0) * cartItem.quantity
+    }, 0).toLocaleString("es-CL");
+    return totalPrice;
+  }
+  const removeItem = (newItem) => {
+    setShoppingCartItem(currItems => {
+      return currItems.filter(item => item.id !== newItem.id)
+    })
+  }
   return (
-    <ShoppingCartContext.Provider value={{shoppingCartItem, decreaseItemAmount, increaseItemAmount,}}>
+    <ShoppingCartContext.Provider value={{shoppingCartItem, decreaseItemAmount, increaseItemAmount, removeItem,totalPriceCart}}>
       {props.children}
     </ShoppingCartContext.Provider>
   )
