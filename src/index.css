@@ -14,4 +14,9 @@ code {
 
 .flexContainer {
   display: flex;
+  gap: 1rem;
+}
+
+.imageCart {
+  width: 8rem;
 }

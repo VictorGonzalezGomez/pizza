@@ -7,7 +7,6 @@ export default function ProductProvider(props) {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-
     const fetchData = async () => {
       try {
          const response = await fetch('./pizzas.json');
@@ -21,7 +20,7 @@ export default function ProductProvider(props) {
         setIsError(true)
       }
     }
-    fetchData();
+      fetchData();
   }, [])
 
   return (
