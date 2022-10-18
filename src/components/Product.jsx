@@ -7,6 +7,7 @@ import {useNavigate} from "react-router-dom";
 import {ShoppingCartContext} from "../context/ShoppingCartProvider";
 import ingredients from "../assets/img/ingridients.png"
 const Product = () => {
+
   const ingredientsLogo = ingredients;
   const navigate = useNavigate()
   const pizzas = useContext(ProductContext);
@@ -26,7 +27,7 @@ const Product = () => {
               </Card.Body>
               <ListGroup className="list-group-flush">
                 {pizza.ingredients.map((ingredient, index) => (
-                  <ListGroup.Item key={index}><img src={ingredients} className="ingredientsLogo"/>{ingredient}</ListGroup.Item>
+                  <ListGroup.Item key={index}><img src={ingredientsLogo} alt="dibujo de dos porciones de pizzas con un ciruclo rojo de fondo" className="ingredientsLogo"/>{ingredient}</ListGroup.Item>
                 ))}
               </ListGroup>
               <Card.Body>

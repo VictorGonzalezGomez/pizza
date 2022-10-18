@@ -14,17 +14,22 @@ const upperCase = (item) => {
   }
   return (
 
-
     <Card>
       <Card.Header as="h5">Detalle del pedido:</Card.Header>
       <Card.Body >
         <ListGroup className="list-group-flush">
           {shoppingCartItem.map((item, index) => (
-            <ListGroup.Item key={index}>  <img variant="top" src={item.img} alt={item.desc} className="imageCart"/> {upperCase(item)}
-              ${(item.price * item.quantity).toLocaleString("es-CL")}<Button onClick={() => decreaseItemAmount(item)}>-</Button>{item.quantity}<Button
-                onClick={() => increaseItemAmount(item)}>+</Button>
+            <ListGroup.Item key={index}> <img variant="top" src={item.img} alt={item.desc} className="imageCart"/> {upperCase(item)}
+              ${(item.price * item.quantity).toLocaleString("es-CL")}
+              <Button onClick={() => decreaseItemAmount(item)}>
+                -
+              </Button>
+              {item.quantity}
               <Button
-                onClick={() => removeItem(item)}>X</Button>
+                onClick={() => increaseItemAmount(item)}>+</Button>
+              <Button onClick={() => removeItem(item)}>
+                X
+              </Button>
             </ListGroup.Item>
           ))}
         </ListGroup>
@@ -34,7 +39,6 @@ const upperCase = (item) => {
         <Button variant="primary">Ir a Pagar</Button>
       </Card.Body>
     </Card>
-
   )
 };
 

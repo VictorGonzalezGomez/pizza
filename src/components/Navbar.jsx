@@ -7,6 +7,7 @@ import {useContext} from "react";
 import {ShoppingCartContext} from "../context/ShoppingCartProvider";
 
 function PizzaNavbar() {
+
   const {totalPriceCart} = useContext(ShoppingCartContext);
   const logoPizzaSlide = logoPizza;
   const cartLogo = logoCart;
@@ -18,7 +19,7 @@ function PizzaNavbar() {
                  className={({isActive}) =>
                    isActive ? "active" : "disable"
                  } end>
-          <img src={logoPizzaSlide} className="logo"/>Pizzeria mamma mia!!
+          <img src={logoPizzaSlide} alt="logo de un slice de pizza" className="logo"/>Pizzeria mamma mia!!
         </NavLink>
         <Navbar.Toggle/>
         <Navbar.Collapse className="justify-content-end">
@@ -26,7 +27,7 @@ function PizzaNavbar() {
                    className={({isActive}) =>
                      isActive ? "active" : "disable"
                    }>
-            <img src={cartLogo} className="logo"/> {totalPriceCart()}
+            <img src={cartLogo} alt="logo de un carro de compras" className="logo"/> {totalPriceCart()}
           </NavLink>
         </Navbar.Collapse>
       </Container>
