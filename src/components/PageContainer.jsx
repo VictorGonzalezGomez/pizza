@@ -5,8 +5,6 @@ import Home from "../views/Home";
 import PizzaDetail from "../views/PizzaDetail";
 import Cart from "../views/Cart";
 
-
-
 const PageContainer = () => {
 
 
@@ -20,8 +18,6 @@ const PageContainer = () => {
           <Route path="/carrito" element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
-
-
 
   )
 };
