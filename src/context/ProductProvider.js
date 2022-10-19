@@ -15,7 +15,7 @@ export default function ProductProvider(props) {
           const data = await response.json();
           setPizzas(data);
         } else {
-          throw 'Error fetching users list'
+          throw 'Error fetching pizzas list'
         }
       } catch (error) {
         setIsError(true)
