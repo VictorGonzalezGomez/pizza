@@ -30,23 +30,32 @@ code {
 .disable {
     text-decoration: none;
     color: white;
-
 }
 
 .bannerImage {
     width: 100%;
-
 }
 
 .productContainer {
     width: 70rem;
     display: flex;
-
 }
+
 .logo {
   width: 2rem;
 }
 
 .ingredientsLogo {
     width: 2rem;
+}
+
+.cartButtonsContainer{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.carlElement{
+    display: flex;
+    justify-content: space-between;
 }
