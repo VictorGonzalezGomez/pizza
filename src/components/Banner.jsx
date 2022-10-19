@@ -4,7 +4,7 @@ function Banner() {
 const imageBanner = bannerImg;
   return (
 <div>
-  <img src={imageBanner} className="bannerImage"/>
+  <img src={imageBanner} alt="banner de especial de pizzas con 50% de descuento a la derecha se ve una pizza con distintos tipos de ingredientes" className="bannerImage"/>
 </div>
   );
 }
